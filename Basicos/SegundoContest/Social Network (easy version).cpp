@@ -31,7 +31,9 @@ int main(){
         else
             len = st.size();
 
-        cout<<len<<st.top());
+        cout<<len<<endl;
+        
+        cout<<st.top()<<" ";
         st.pop();
         --len;
 
@@ -39,11 +41,12 @@ int main(){
             if (!len)
                 break;
 
-            cout<<st.top();
+            cout<<st.top()<<" ";
+
             --len;
             st.pop();
         }
 
-  cout<<"\n";
+  
   return 0;
 }
