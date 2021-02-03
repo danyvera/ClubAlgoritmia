@@ -2,51 +2,54 @@
 using namespace std;
 
 int main(){
-  int n,k,val,i,x,p,len;
 
-   cin>>n>>k;
-   map <int,int> mp;
-   stack <int> st;
+    int n,k;
+    cin>>n>>k;
 
-        for (i=1; i<=n; i++){
-            cin>>val;
+    int IDamigo,x,p,len;
+    map <int,int> mp;
+    stack <int> pila;
 
-            if (st.empty()){
-                mp[val] = 1;
-                st.push(val);
+        for (int i=1; i<=n; i++){
+            cin>>IDamigo;
+
+            if (pila.empty()){
+                mp[IDamigo] = 1;
+                pila.push(IDamigo);
             }
             else {
-                p = st.size()-mp[val]+1;
+                p = pila.size()-mp[IDamigo]+1;
 
-                if (mp[val] == 0 || (p > 0 && p > k)) {
-                    x = st.top();
-                    mp[val] = mp[x]+1;
-                    st.push(val);
+                if (mp[IDamigo] == 0 || (p > 0 && p > k)) {
+                    x = pila.top();
+                    mp[IDamigo] = mp[x]+1;
+                    pila.push(IDamigo);
                 }
             }
         }
 
-        if (st.size() > k)
+        if (pila.size() > k){
             len = k;
-        else
-            len = st.size();
-
-        cout<<len<<endl;
-        
-        cout<<st.top()<<" ";
-        st.pop();
-        --len;
-
-        while (!st.empty()) {
-            if (!len)
-                break;
-
-            cout<<st.top()<<" ";
-
-            --len;
-            st.pop();
+        }
+        else{
+            len = pila.size();
         }
 
-  
-  return 0;
+        cout<<len<<endl;
+
+        cout<<pila.top()<<" ";
+        pila.pop();
+        --len;
+
+        while (!pila.empty()) {
+            if (!len){
+                break;
+            }
+
+            cout<<pila.top()<<" ";
+            --len;
+            pila.pop();
+        }
+
+    return 0;
 }
