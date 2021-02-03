@@ -1,14 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define    mii        map <int,int>
-
 
 int main(){
   int n,k,val,i,x,p,len;
 
-    while (sf ("%d %d",&n,&k) != EOF){
-        mii mp;
-        stack <int> st;
+   cin>>n>>k;
+   map <int,int> mp;
+   stack <int> st;
 
         for (i=1; i<=n; i++){
             cin>>val;
@@ -46,6 +44,6 @@ int main(){
             st.pop();
         }
 
-        cout<<"\n";
-    }
-  }
+  cout<<"\n";
+  return 0;
+}
