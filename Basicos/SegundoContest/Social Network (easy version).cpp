@@ -2,13 +2,12 @@
 using namespace std;
 
 int main(){
-
     int n,k;
     cin>>n>>k;
 
-    int IDamigo,x,p,len;
     map <int,int> mp;
     stack <int> pila;
+    int IDamigo,x,p,len;
 
         for (int i=1; i<=n; i++){
             cin>>IDamigo;
