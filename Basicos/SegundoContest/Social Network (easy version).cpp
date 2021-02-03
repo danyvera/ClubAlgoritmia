@@ -1,3 +1,6 @@
+//Social Network (easy version) 
+//Link del problema en codeforces: https://codeforces.com/problemset/problem/1234/B1
+
 #include <bits/stdc++.h>
 using namespace std;
 
