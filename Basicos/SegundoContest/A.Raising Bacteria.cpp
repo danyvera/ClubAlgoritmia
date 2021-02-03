@@ -3,13 +3,12 @@
 
 #include<bits/stdc++.h>
 using namespace std;
-#define endl '\n';
- 
+
 int main(){
-	int x,ans;
+	int x;
 	cin>>x;
-	ans=0;
- 
+	int ans=0;
+
 	while(x!=0){
 		if(x%2==1){
 			ans++;
@@ -17,4 +16,5 @@ int main(){
 		x/=2 ;
 	}
 	cout<<ans;
+	return 0;
 }
